@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Laterisers
+Author: The LR Crew
 
 Stylesheet: Main Stylesheet
 
@@ -117,4 +117,41 @@ be set to display none.
 */
 @media print {
 	@import "print";
+}
+
+
+
+
+
+
+
+/*****************************************************
+** LR CREW CUSTOM STYLES
+******************************************************/
+
+/*
+** GLOBAL STYLEZ
+***************************************/
+
+// COLOR PALETTE
+$primary: #385C68;
+// TYPOGRAPHY
+$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+h1, h2, h3, h4, h5 {
+	font-family: $sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+}
+
+a {
+	text-decoration: none;
+	color: $primary;
+
+	&:hover {
+		text-decoration: underline;
+	}
+	&:visited {
+		color: #385c68;
+	}
 }
