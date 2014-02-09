@@ -1623,11 +1623,11 @@ a {
   @media only screen and (min-width: 480px) {
     .single-post-hero {
       display: block; } }
-  .single-post-hero img {
-    width: 100%;
+  .single-post-hero > img {
+    width: 100% !important;
     display: none; }
     @media only screen and (min-width: 480px) {
-      .single-post-hero img {
+      .single-post-hero > img {
         display: inline; } }
 
 .single-post {
@@ -1638,6 +1638,12 @@ a {
     margin-top: 40px; }
   .single-post p {
     padding-bottom: 20px; }
+  .single-post img {
+    width: auto; }
+
+.alignleft {
+  width: auto;
+  height: auto !important; }
 
 .main-page-caption {
   text-align: center; }

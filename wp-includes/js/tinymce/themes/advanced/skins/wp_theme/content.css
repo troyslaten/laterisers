@@ -59,6 +59,8 @@ dl.aligncenter {
 
 .alignleft {
 	float: left;
+	width: auto;
+	height: auto;
 }
 
 .alignright {

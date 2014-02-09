@@ -344,8 +344,8 @@ a {
 	@media only screen and (min-width : 480px) {
 		display: block;
 	}
-	img {
-		width: 100%;
+	& > img {
+		width: 100% !important;
 		display: none;
 
 		@media only screen and (min-width : 480px) {
@@ -366,6 +366,14 @@ a {
 	p {
 		padding-bottom: 20px;
 	}
+
+	img {
+		width: auto;
+	}
+}
+.alignleft {
+	width: auto;
+	height: auto !important;
 }
 
 .main-page-caption {
