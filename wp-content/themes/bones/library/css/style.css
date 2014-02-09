@@ -1466,15 +1466,176 @@ be set to display none.
 /*
 ** GLOBAL STYLEZ
 ***************************************/
+body {
+  background: #f4f4f4; }
+
 h1, h2, h3, h4, h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ff-meta-serif-web-pro", Georgia;
   text-rendering: optimizelegibility;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #3f4752; }
+
+p {
+  font-family: "ff-meta-serif-web-pro", Georgia; }
 
 a {
   text-decoration: none;
-  color: #385c68; }
+  color: #3f4752; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: none;
+    color: #878787 !important; }
   a:visited {
     color: #385c68; }
+
+#content {
+  margin-top: 0px; }
+
+.button {
+  background: transparent;
+  border: 3px solid #3f4752;
+  border-radius: 0;
+  padding: 5px 30px;
+  color: #3f4752;
+  text-shadow: none; }
+  .button:hover {
+    background: transparent;
+    border: 3px solid #3f4752;
+    border-radius: 0;
+    padding: 5px 10px;
+    color: #878787;
+    text-shadow: none; }
+
+/*
+** Hero Image
+***************************************/
+.hero {
+  height: 700px;
+  width: 100%;
+  background: red;
+  background: url("../images/lr-hero.jpg") no-repeat center center;
+  background-size: cover; }
+
+/*
+** NAV & LOGO 
+***************************************/
+.sticky-header {
+  border-bottom: 1px solid #ccc;
+  background-color: #ebebeb; }
+
+.logo, .nav {
+  float: left;
+  width: 50%; }
+  .logo > .nav, .nav > .nav {
+    width: 100%;
+    float: right; }
+
+.logo {
+  margin-bottom: 0px; }
+
+.nav {
+  text-align: right;
+  background: none; }
+  .nav ul {
+    text-align: right; }
+    .nav ul li {
+      float: none;
+      display: inline-block; }
+      .nav ul li a {
+        background: none;
+        position: relative;
+        top: 8px;
+        color: #878787; }
+        .nav ul li a:hover {
+          color: #3f4752;
+          background: none; }
+
+/*
+** MAIN PAGE POST 
+***************************************/
+.main-page-caption {
+  margin-bottom: 70px;
+  padding: 40px;
+  background: #ebebeb; }
+
+.main-post {
+  background: #ebebeb;
+  margin-bottom: 70px;
+  text-align: center;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75); }
+  .main-post .post-feature-img {
+    overflow: hidden;
+    height: 500px; }
+  .main-post img {
+    width: 100%;
+    max-height: 500px;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+  .main-post:hover img {
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+  .main-post h1 {
+    margin-top: 40px; }
+  .main-post p {
+    padding: 0 200px;
+    color: #878787;
+    line-height: 1.75em; }
+  .main-post .excerpt-read-more {
+    display: block;
+    margin: 30px auto;
+    border: 3px solid #3f4752;
+    width: 220px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 3px 10px;
+    letter-spacing: 0.4em; }
+
+/*
+** MAIN PAGE POST 
+***************************************/
+.single-post-hero {
+  height: 500px;
+  overflow: hidden;
+  position: relative; }
+  .single-post-hero img {
+    width: 100%; }
+
+.single-post {
+  float: none;
+  margin: 0 auto; }
+  .single-post h1 {
+    margin-bottom: 5px;
+    margin-top: 40px; }
+  .single-post p {
+    padding-bottom: 20px; }
+
+.main-page-caption {
+  text-align: center; }
+  .main-page-caption h2 {
+    margin-bottom: 10px;
+    margin-top: 0px; }
+  .main-page-caption ul {
+    margin-bottom: 0px; }
+  .main-page-caption ul li {
+    display: inline-block;
+    margin: 0 10px; }
+
+/*
+** MAIN PAGE POST 
+***************************************/
+.footer {
+  background: #3f4752;
+  color: #878787; }

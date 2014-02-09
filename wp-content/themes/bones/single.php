@@ -2,9 +2,16 @@
 
 			<div id="content">
 
+				<div class="post-feature-img single-post-hero">
+					<?php 
+						if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+						  the_post_thumbnail('full');
+						} 
+					?>
+				</div>
 				<div id="inner-content" class="wrap clearfix">
-
-					<div id="main" class="eightcol first clearfix" role="main">
+					<div class="threecol"></div>
+					<div id="main" class="eightcol single-post" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -18,7 +25,7 @@
 									?></p>
 
 								</header>
-
+								
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section>
@@ -51,9 +58,6 @@
 						<?php endif; ?>
 
 					</div>
-
-					<?php get_sidebar(); ?>
-
 				</div>
 
 			</div>

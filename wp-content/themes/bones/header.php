@@ -37,24 +37,30 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<!--Typekit Web Fonts -->
+		<script type="text/javascript" src="//use.typekit.net/uny7vwz.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 	</head>
 
 	<body <?php body_class(); ?>>
 
 		<div id="container">
 
-			<header class="header" role="banner">
+			<header class="header sticky-header" role="banner">
 
 				<div id="inner-header" class="wrap clearfix">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<p class="logo" id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
 
-					<nav role="navigation">
+					<nav class="nav" role="navigation">
 						<?php bones_main_nav(); ?>
 					</nav>
 

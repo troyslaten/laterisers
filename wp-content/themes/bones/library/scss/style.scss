@@ -132,16 +132,30 @@ be set to display none.
 /*
 ** GLOBAL STYLEZ
 ***************************************/
+body {
+	background: #f4f4f4;
+}
+
 
 // COLOR PALETTE
-$primary: #385C68;
+$primary: #3f4752;
+$secondary: #878787;
+$body-copy: #878787;
+$bg-light: #ebebeb;
+$bg-dark: #3f4752;
+
+
 // TYPOGRAPHY
-$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "ff-meta-serif-web-pro", Georgia;
 
 h1, h2, h3, h4, h5 {
-	font-family: $sans-serif;
+	font-family: $serif;
 	text-rendering: optimizelegibility;
 	font-weight: 500;
+	color: $primary;
+}
+p {
+	font-family: $serif;
 }
 
 a {
@@ -149,9 +163,213 @@ a {
 	color: $primary;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
+		color: $secondary !important;
 	}
 	&:visited {
 		color: #385c68;
 	}
+}
+
+
+#content {
+	margin-top: 0px;
+}
+
+.button {
+	background: transparent;
+	border: 3px solid $primary;
+	border-radius: 0;
+	padding: 5px 30px;
+	color: $primary;
+	text-shadow: none;
+
+	&:hover {
+		background: transparent;
+		border: 3px solid $primary;
+		border-radius: 0;
+		padding: 5px 10px;
+		color: $secondary;
+		text-shadow: none;
+	}
+}
+/*
+** Hero Image
+***************************************/
+.hero {
+	height: 700px;
+	width: 100%;
+	background: red;
+
+	background: url("../images/lr-hero.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+
+
+/*
+** NAV & LOGO 
+***************************************/
+.sticky-header {
+	border-bottom: 1px solid #ccc;
+	background-color: $bg-light;
+}
+
+.logo, .nav {
+	float: left;
+	width: 50%;
+
+	& > .nav {
+		width: 100%;
+		float: right;
+	}
+}
+.logo {
+	margin-bottom: 0px;
+}
+.nav {
+	text-align: right;
+	background: none;
+	
+	ul {
+		text-align: right;
+		li {
+			float: none;
+			display: inline-block;
+
+			a { 
+				background: none; 
+				position: relative;
+				top: 8px;
+				color: $body-copy;
+
+				&:hover {
+					color: $bg-dark;
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+** MAIN PAGE POST 
+***************************************/
+.main-page-caption {
+	margin-bottom: 70px;
+	padding: 40px;
+	background: $bg-light;
+}
+.main-post {
+	background: $bg-light;
+	margin-bottom: 70px;
+	text-align: center;
+	overflow: hidden;
+
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	
+	.post-feature-img {
+		overflow: hidden;
+		height: 500px;
+	}
+	img {
+		width: 100%;
+		max-height: 500px;
+
+		transform:scale(1);
+	    -ms-transform:scale(1);
+	    -moz-transform:scale(1);
+	    -webkit-transform:scale(1);
+	    -o-transform:scale(1);
+		-webkit-transition: all 0.5s ease;
+	  	-moz-transition: all 0.5s ease;
+	  	-o-transition: all 0.5s ease;
+	  	-ms-transition: all 0.5s ease;
+	  	transition: all 0.5s ease;
+	}
+	
+	&:hover img {
+	    -ms-transform:scale(1.1);
+	    -moz-transform:scale(1.1);
+	    -webkit-transform:scale(1.1);
+	    -o-transform:scale(1.1);
+	    transform:scale(1.1);
+	}
+
+	h1 {
+		margin-top: 40px;
+	}
+	p {
+		padding: 0 200px;
+		color: $body-copy;
+		line-height: 1.75em;
+	}
+
+	.excerpt-read-more {
+		display: block;
+		margin: 30px auto;
+		border: 3px solid $bg-dark;
+		width: 220px;
+		text-transform: uppercase;
+		font-size: 12px;
+		padding: 3px 10px;
+		letter-spacing: 0.4em;
+	}
+}
+
+
+/*
+** MAIN PAGE POST 
+***************************************/
+.single-post-hero {
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	img {
+		width: 100%;
+	}
+}
+
+.single-post {
+	float: none;
+	margin: 0 auto;
+
+	h1 {
+		margin-bottom: 5px;
+		margin-top: 40px;
+	}
+
+	p {
+		padding-bottom: 20px;
+	}
+}
+
+.main-page-caption {
+	text-align: center;
+
+	h2 {
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+
+	ul {
+		margin-bottom: 0px;
+	}
+	ul li {
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
+
+
+/*
+** MAIN PAGE POST 
+***************************************/
+
+.footer {
+	background: $primary;
+	color: $secondary;
 }

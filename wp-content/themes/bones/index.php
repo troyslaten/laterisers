@@ -2,6 +2,17 @@
 
 			<div id="content">
 
+				<section class="hero">
+				</section>
+				<section class="main-page-caption">
+					<h2>Stories From</h2>
+					<ul>
+						<li>Orlando</li>&bull;
+						<li>Boston</li>&bull;
+						<li>San Diego</li>
+					</ul>
+				</section>
+
 				<div id="inner-content" class="wrap clearfix">
 
 						<div id="main" class="twelvecol first clearfix" role="main">
@@ -10,17 +21,19 @@
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
-									<header class="article-header">
-
+									<section class="entry-content clearfix main-post">
+										<div class="post-feature-img">
+											<?php 
+												if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+												  the_post_thumbnail('full');
+												} 
+											?>
+										</div>
 										<h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-										<p class="byline vcard"><?php
+										<!-- <p class="byline vcard"><?php
 											printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
-										?></p>
-
-									</header>
-
-									<section class="entry-content clearfix">
-										<?php the_content(); ?>
+										?></p> -->
+										<?php the_excerpt(); ?>
 									</section>
 
 									<footer class="article-footer">
@@ -67,4 +80,10 @@
 
 			</div>
 
+			<script>
+$(window).scroll(function(){
+    var fromTop = $(window).scrollTop();
+    $(".post").css('margin', '-' + (100 - fromTop) + 'px 0px 0px 0px');
+});
+</script>
 <?php get_footer(); ?>
